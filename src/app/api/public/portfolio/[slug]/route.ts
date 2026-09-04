@@ -24,9 +24,12 @@ export async function GET(
       data: { views: { increment: 1 } },
     });
 
-    return NextResponse.json({ success: true, data: portfolio });
+    return NextResponse.json({
+      success: true,
+      data: portfolio,
+    });
   } catch (error) {
-    console.error('Get public portfolio error:', error);
+    console.error('Error fetching portfolio:', error);
     return NextResponse.json(
       { error: 'Erreur lors de la récupération du portfolio' },
       { status: 500 }
