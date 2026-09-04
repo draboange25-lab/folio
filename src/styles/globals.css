@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-dark-tertiary;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark text-white antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-tertiary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-lime;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-lime text-dark font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-lime/50 active:scale-95;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-dark-tertiary text-white font-semibold border border-dark-tertiary transition-all duration-300 hover:border-lime hover:text-lime;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-lg text-white transition-all duration-300 hover:bg-dark-tertiary;
+}
+
+.card {
+  @apply rounded-xl bg-dark-secondary border border-dark-tertiary p-6 transition-all duration-300 hover:border-dark-secondary;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-lg bg-dark-tertiary border border-dark-tertiary text-white placeholder-gray-500 transition-all duration-300 focus:outline-none focus:border-lime focus:ring-1 focus:ring-lime/50;
+}
+
+.label {
+  @apply block text-sm font-medium text-gray-300 mb-2;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.3s ease-in-out;
+}
