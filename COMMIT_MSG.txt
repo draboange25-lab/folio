@@ -1,0 +1,8 @@
+chore: Add database seeding, setup script, and comprehensive documentation
+
+- Add Prisma seed script with 7 initial templates
+- Create bash setup script for automated installation
+- Add SETUP.md with detailed installation and troubleshooting guide
+- Update README.md with complete project documentation
+- Add package.json metadata
+- Add db:seed command to npm scripts
